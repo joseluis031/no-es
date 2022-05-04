@@ -18,6 +18,13 @@ class Ejercicio:
         return percentil
     def mediana(self):
         return self.percentiles(50)
+    def calculo(self):
+        contador = 0
+        for i in self.datos["Peso"]:
+            if i > 40:
+                contador+=1
+        return contador
+    
     
     
 hola = Ejercicio("Datos.csv")
@@ -25,3 +32,4 @@ print (hola.calculo_media())
 print(hola.calculo_desviacion())
 print(hola.percentiles(70))
 print(hola.mediana())
+print(hola.calculo())
