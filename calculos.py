@@ -17,7 +17,7 @@ class Ejercicio:
         percentil = np.percentile(self.datos["Peso"], n)
         return percentil
     def mediana(self):
-        return self.percentiles(50)
+        return self.datos["Peso"].median()
     def calculo(self):
         contador = 0
         for i in self.datos["Peso"]:
